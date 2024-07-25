@@ -38,7 +38,7 @@ const setTokens = (tokens_data) => {
 }
 
 const refreshTokens = async () => {
-  const response = await fetch('http://localhost:3000/users/refresh-token', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/refresh-token`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -50,20 +50,20 @@ const refreshTokens = async () => {
 }
 
 export const fetchRecipes = async (searchTerm = '') => {
-  const response = await fetch(`http://localhost:3000/recipes/search-recipes?s=${searchTerm}`);
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}recipes/search-recipes?s=${searchTerm}`);
   const data = await response.json();
   return data;
 };
 
 
 export const randomMeal = async () => {
-  const response = await fetch('http://localhost:3000/recipes/random-recipe');
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}recipes/random-recipe`);
   const data = await response.json();
   return data;
 };
 
 export const fetchRecipe = async (id) => {
-  const response = await fetch(`http://localhost:3000/recipes/${id}`, {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}recipes/${id}`, {
     headers: {
       Authorization: `Bearer ${Cookies.get('access_token')}`,
     },
@@ -73,7 +73,7 @@ export const fetchRecipe = async (id) => {
 };
 
 export const sendSignUp = async (username, email, password) => {
-  const response = await fetch('http://localhost:3000/users/signup', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ export const sendSignUp = async (username, email, password) => {
 };
 
 export const sendSignIn = async (username, password) => {
-  const response = await fetch('http://localhost:3000/users/signin', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/signin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export const sendSignIn = async (username, password) => {
 };
 
 export const signOut = async () => {
-  const response = await fetch('http://localhost:3000/users/signout', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/signout`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${Cookies.get('access_token')}`,
@@ -120,7 +120,7 @@ export const signOut = async () => {
 };
 
 export const favorite = async (recipeId) => {
-  const response = await fetch('http://localhost:3000/users/favorite', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/favorite`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export const favorite = async (recipeId) => {
 };
 
 export const getFavorites = async () => {
-  const response = await fetch('http://localhost:3000/users/favorites', {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_URL}users/favorites`, {
     headers: {
       Authorization: `Bearer ${Cookies.get('access_token')}`,
     },
@@ -142,11 +142,3 @@ export const getFavorites = async () => {
   return data;
 };
 
-
-
-// useEffect(() => {
-//   const fetchRecipes = async () => {
-//     const recipe = await fetch('http://localhost:3000/recipes')
-//     setRecipe(recipe)
-//   }
-// })
