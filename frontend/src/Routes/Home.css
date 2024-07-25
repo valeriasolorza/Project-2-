@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+body {
+  font-family: 'Edu AU VIC WA NT Hand', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.search-input {
+  width: 20%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inup-buttons, .signed-in-buttons {
+  position: fixed; 
+  top: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 10px; 
+  z-index: 10;
+}
+
+.inup-buttons button, .signed-in-buttons button, .random-recipe-button {
+  font-family: 'Edu AU VIC WA NT Hand', Arial, sans-serif;
+  padding: 8px 16px; 
+  border: none;
+  border-radius: 4px;
+  background-color: #f0a461;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 0.875rem; 
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.inup-buttons button:hover, .signed-in-buttons button:hover, .random-recipe-button:hover {
+  background-color: #d9863e;
+  transform: scale(1.05);
+}
+
+.intro-welcome {
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 20px; 
+  background-color: #d9863e; 
+}
+
+.random-recipe-button {
+  background-color: #f0a461;
+  color: white;
+}
+
+.signed-in-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px; 
+  display: flex;
+  gap: 10px;
+}

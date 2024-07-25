@@ -24,7 +24,6 @@ const Recipe = () => {
 
     return (
         <div className="Recipe">
-        <h1>Recipe App</h1>
         {item}
         </div>
     );

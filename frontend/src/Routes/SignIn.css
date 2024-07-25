@@ -1,0 +1,65 @@
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.sign-in-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px; 
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.sign-in-input {
+    width: 100%;
+    padding: 12px; 
+    margin: 15px 0; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem; 
+}
+
+.sign-in-button {
+    font-family: 'Edu AU VIC WA NT Hand', Arial, sans-serif;
+    width: 100%;
+    padding: 12px; 
+    background-color: #f0a461;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem; 
+}
+
+.sign-in-button:hover {
+    background-color: #d9863e;
+    transform: scale(1.05);
+}
+
+.small-button {
+    font-size: 1rem;
+    color: #f0a461;
+    text-decoration: none;
+    margin: 10px;
+    padding: 8px 12px; 
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.small-button:hover {
+    border: 1px solid #f0a461;
+}

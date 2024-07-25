@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RecipeList from '../components/RecipeList';
 import { getFavorites } from '../API/api';
-
+import './Favorites.css'; 
 
 const Favorites = () => {
     const [recipes, setRecipes] = useState([]);
@@ -17,13 +17,13 @@ const Favorites = () => {
         getRecipes();
     }, []);
 
-  return (
-    <div className="App">
-      <h1>Favorite Recipes</h1>
-      <button onClick={() => window.location.href = '/'}>Home</button>
-      {isLoading ? <p>Loading...</p> : (recipes.length === 0 ? <p>You don't haev any favorited recipes.</p> : <RecipeList recipes={recipes} />)}
-    </div>
-  );
+    return (
+        <div className="App">
+            <h1>Favorite Recipes</h1>
+            <button className="home-button" onClick={() => window.location.href = '/'}>Home</button>
+            {isLoading ? <p>Loading...</p> : (recipes.length === 0 ? <p>You don't have any favorite recipes.</p> : <RecipeList recipes={recipes} />)}
+        </div>
+    );
 };
 
 export default Favorites;

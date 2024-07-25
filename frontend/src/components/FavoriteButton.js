@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { favorite } from '../API/api';
+import './FavoriteButton.css';
 
 const FavoriteButton = ({ recipe, isFavorite }) => {
     const [isFav, setIsFavorite] = useState(isFavorite);
