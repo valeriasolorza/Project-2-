@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Routes/App';
+import App from './Routes/Home';
 import Recipe from './Routes/Recipe';
 import SignUp from './Routes/SignUp';
 import SignIn from './Routes/SignIn';
